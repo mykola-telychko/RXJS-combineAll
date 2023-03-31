@@ -1,6 +1,9 @@
 import { take, map, combineAll } from 'rxjs/operators';
 import { interval } from 'rxjs';
 
+// https://www.learnrxjs.io/learn-rxjs/operators/combination/combineall
+// When source observable completes use combineLatest with collected observables.
+
 // emit every 1s, take 2
 const sourceEmitter$ = interval(1000).pipe(take(2));
 // map each emitted value from source to interval observable that takes 5 values
